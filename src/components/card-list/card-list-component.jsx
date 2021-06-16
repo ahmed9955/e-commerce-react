@@ -3,9 +3,14 @@ import { Card } from '../card-component/card-component'
 import './card-list-style.css'
 export const CardList = (props) =>
 { 
+    const {monsters, search} = props
     return (
     <div className="card-list">
-        {props.monsters.map(user => <Card monsters = {user}/>)}    
+        {
+        monsters.filter(user => user.name.includes(search))
+        .map(user => <Card monsters = {user}/>)
+        
+        }    
     </div>
     )
 }

@@ -6,7 +6,8 @@ class App extends React.Component {
   constructor(){
     super()
     this.state = {
-      monsters: []
+      monsters: [],
+      search:''
     }
   }
 
@@ -17,10 +18,17 @@ class App extends React.Component {
     this.setState({monsters: response}) 
   }
 
+  search = (e) => {
+    this.setState({search: e.target.value})
+  }
+
   render(){
+    const {monsters, search} = this.state
     return (
       <div className="App">
-        <CardList monsters={this.state.monsters}/>
+        <h1>MONSTERS Rolodex</h1>
+        <input className="search-bar" type="search" placeholder="type your monster" onChange={this.search}/>
+        <CardList monsters={monsters} search={search}/>
       </div>
   );  
 }
