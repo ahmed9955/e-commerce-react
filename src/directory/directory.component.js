@@ -8,32 +8,32 @@ export default class Directory extends React.Component{
         this.state = {
             section: [
                 {
-                    name:"chinese",
-                    url:"https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                    name:"Hats",
+                    url:"https://i.ibb.co/ypkgK0X/blue-beanie.png",
                     size:'',
-                    path:'chinese'
+                    path:'hats'
                 },
                 {
-                    name:"snacks",
-                    url: "https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-                    size:'',
-                    path:''
-                },
-                {
-                    name:"sweets",
-                    url: "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                    name:"Jackets",
+                    url: "https://i.ibb.co/XzcwL5s/black-shearling.png",
                     size:'',
                     path:''
                 },
                 {
-                    name:"fish",
-                    url: "https://images.pexels.com/photos/1660030/pexels-photo-1660030.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                    name:"sneakers",
+                    url: "https://i.ibb.co/0s3pdnc/adidas-nmd.png",
+                    size:'',
+                    path:''
+                },
+                {
+                    name:"Men",
+                    url: "https://i.ibb.co/qMQ75QZ/floral-shirt.png",
                     size:'large',
                     path:''
                 },
                 {
-                    name:"chicken",
-                    url: "https://images.pexels.com/photos/1414651/pexels-photo-1414651.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                    name:"women",
+                    url: "https://i.ibb.co/7CQVJNm/blue-tank.png",
                     size:'large',
                     path:''               
                 }
