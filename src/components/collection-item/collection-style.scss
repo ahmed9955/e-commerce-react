@@ -1,0 +1,18 @@
+.collection-item{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-family: 'Open Sans', sans-serif;
+    margin-right: 25px;
+    .collection-footer{
+        margin-top: 5px;       
+    }
+    .image{
+        height: 300px;
+    }
+    .price{
+        float: right;
+    }
+}
+
+
