@@ -4,7 +4,6 @@ import CustomButton from '../custom-button/custom-button'
 
 import {auth, createUserProfileDocument} from '../../firebase/firebase.utils'
 import './sign-up-component.scss'
-import SignIn from '../../pages/SignIn/SignInandsignup'
 
 class SignUp extends React.Component {
     
@@ -18,7 +17,8 @@ class SignUp extends React.Component {
         }
     }
 
-    handleSubmit = async () => {
+    handleSubmit = async (e) => {
+        e.preventDefault();
         const {displayName,email,password,confirmPassword} = this.state
         if(password !== confirmPassword){
             alert('password dosnot match')
@@ -76,14 +76,15 @@ class SignUp extends React.Component {
                     required
                     />
 
-                    <FormInput 
+                <FormInput 
                     type="password" 
-                    name="confirmpassword" 
+                    name="confirmPassword" 
                     value={confirmPassword}
                     onChange={this.handleChange}
                     label="confirm password"
                     required
                     />
+
                     <CustomButton type='submit'>
                         SIGN UP
                     </CustomButton>
