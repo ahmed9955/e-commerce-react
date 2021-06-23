@@ -1,0 +1,16 @@
+.header{
+    width:90vw ;
+    margin: 0 auto;
+    .options{
+        float: right;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        .option{
+            margin-right: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+}

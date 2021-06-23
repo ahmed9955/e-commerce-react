@@ -16,7 +16,7 @@ export default class ShopPage extends React.Component {
             <div >
                 {collections.map(item =>
                      <div key={item.id}>
-                         <h1>{item.title}</h1>
+                         <h1 style={{marginLeft:'30px'}}>{item.title}</h1>
                          <Preview items = {item.items}/>
                      </div>
                      )}

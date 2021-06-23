@@ -1,6 +1,7 @@
 body{
   font-family: 'Open Sans', sans-serif;
-  padding: 20px 60px ;
+  min-height: 100vh;
+  
 }
 .App {
   text-align: center;
