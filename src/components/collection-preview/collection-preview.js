@@ -3,7 +3,7 @@ import './preview-style.scss'
  const Preview = ({items}) => {
     return(
        <div className="preview" >
-           {items.filter((item,idx) => idx < 4).map(({id,...otherProps}) => <CollectionItem key={id} {...otherProps} />)}       
+           {items.filter((item,idx) => idx < 4).map((item) => <CollectionItem key={item.id} items={item} />)}       
        </div>
     )
 }

@@ -4,9 +4,12 @@ import {ReactComponent as Logo} from '../../assets/crown.svg'
 import './header.scss'
 import {auth} from '../../firebase/firebase.utils'
 import { connect } from 'react-redux'
+import CardItem from '../cardItem-component/card-item'
+import CardDropDown from '../card-dropdown/card-dropdown'
+import { setMenuVisibility } from '../../redux/card/action'
 
-
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, setMenuVisibility, hidden  }) => {
+    return(
     <div className="header">
         <Link to="/" className="logo-container" >
             <Logo className="logo" />
@@ -25,13 +28,20 @@ const Header = ({ currentUser }) => (
                 <Link className='option' to="/signin">
                     SIGN IN
                 </Link>
-            }   
+            }
+            <CardItem handleClick={()=> {setMenuVisibility(!hidden)}}/>
         </div>
+        <CardDropDown  visibility={hidden?'hidden':'visible'}/>
     </div>
 )
-
+}
 const mapStateToProps = (state) => ({
-    currentUser : state.user.current_user
+    currentUser : state.user.current_user,
+    hidden: state.card.hidden
 })
 
-export default connect(mapStateToProps)(Header)
+const mapDispatchToProps = dispath => ({
+    setMenuVisibility: (visibility) => dispath(setMenuVisibility(visibility))
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(Header)
