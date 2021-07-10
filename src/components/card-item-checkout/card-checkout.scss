@@ -1,0 +1,11 @@
+.card-check-out{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    .card-meta{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5px;
+    }
+}

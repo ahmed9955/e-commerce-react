@@ -7,6 +7,9 @@ import { connect } from 'react-redux'
 import CardItem from '../cardItem-component/card-item'
 import CardDropDown from '../card-dropdown/card-dropdown'
 import { setMenuVisibility } from '../../redux/card/action'
+import { selectCurrentUser } from '../../redux/user/user-selector'
+import { selectCardHidden } from '../../redux/card/card-selector'
+import { createStructuredSelector } from 'reselect'
 
 const Header = ({ currentUser, setMenuVisibility, hidden  }) => {
     return(
@@ -35,9 +38,9 @@ const Header = ({ currentUser, setMenuVisibility, hidden  }) => {
     </div>
 )
 }
-const mapStateToProps = (state) => ({
-    currentUser : state.user.current_user,
-    hidden: state.card.hidden
+const mapStateToProps = createStructuredSelector ({
+    currentUser : selectCurrentUser,
+    hidden: selectCardHidden
 })
 
 const mapDispatchToProps = dispath => ({
