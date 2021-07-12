@@ -6,6 +6,7 @@ import cardReducer from './card/reducer'
 import { persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { sectionsReducer } from './categories/secions-reducer'
+import { collectionReducer } from './categories/collection-reducer'
 
 const persistConfig = {
     key: 'root',
@@ -16,7 +17,8 @@ const persistConfig = {
 const rootReducer = combineReducers({
     user: userReducer,
     card: cardReducer,
-    sections: sectionsReducer
+    sections: sectionsReducer,
+    collections: collectionReducer
 })  
 
 export default persistReducer(persistConfig, rootReducer) 
