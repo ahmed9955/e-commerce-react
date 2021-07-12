@@ -9,3 +9,8 @@ export const addItems = item => ({
     type: cardActionTypes.ADDITEMS,
     payload: item
 })
+
+export const removeItem = id => ({
+    type: cardActionTypes.REMOVEITEM,
+    payload: id
+})

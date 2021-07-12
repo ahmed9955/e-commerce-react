@@ -19,6 +19,15 @@ const cardReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 items : handleCardItems(state.items, action.payload)
             }
+        case cardActionTypes.REMOVEITEM:
+            return {
+                ...state,
+                items: state.items.filter(item => {
+                    if (item.id != action.payload){
+                        return (item)
+                    }
+                })
+            }
 
         default: return state
         }
