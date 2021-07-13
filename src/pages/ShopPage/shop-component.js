@@ -1,20 +1,15 @@
 import React from 'react'
 import Preview from '../../components/collection-preview/collection-preview'
+import SHOP_DATA from './ShopData'
 import './shop-style.scss'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { collectionsSelector } from '../../redux/categories/collections-selector'
+import OverView from '../../components/collection-overview/collection-overview'
 
 const ShopPage = ({collections}) =>  {
         return(
-            <div >
-                {collections.map(item =>
-                     <div key={item.id}>
-                         <h1 style={{marginLeft:'30px'}}>{item.title}</h1>
-                         <Preview items = {item.items}/>
-                     </div>
-                     )}
-            </div>
+           <OverView/>
         )
     
 }
